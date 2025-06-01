@@ -1,5 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import {View, Text, Image, StyleSheet, Pressable, Alert} from 'react-native';
+import Profile from './components/Profile';
 
 export default function App() {
   const buttonMessage = () => {
@@ -39,9 +40,13 @@ export default function App() {
             <Text style={styles.moreText}>⋯</Text>
           </Pressable>
           
-        </View>      
+        </View>
+        <Profile image="" profile="roocifer246" viaText="new_posts_everyday"/>      
       </View>
+      
     </View>
+
+    
   );
 }
 
