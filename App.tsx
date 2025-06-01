@@ -41,7 +41,10 @@ export default function App() {
           </Pressable>
           
         </View>
-        <Profile image="" profile="roocifer246" viaText="new_posts_everyday"/>      
+        <Profile 
+          image="https://images.pexels.com/photos/220938/pexels-photo-220938.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+          profile="ootd_everyday" 
+          viaText="frenchie_fry40"/>      
       </View>
       
     </View>
