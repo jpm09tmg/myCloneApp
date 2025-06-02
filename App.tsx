@@ -39,12 +39,16 @@ export default function App() {
           <Pressable onPress={buttonMessage}>
             <Text style={styles.moreText}>⋯</Text>
           </Pressable>
-          
+        </View>   
+
+        <View>
+          <Image
+            source={{
+              uri: 'https://images.pexels.com/photos/17491971/pexels-photo-17491971/free-photo-of-man-taking-a-walk-with-a-dog.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            }}
+            style={styles.postImage}
+          />
         </View>
-        <Profile 
-          image="https://images.pexels.com/photos/220938/pexels-photo-220938.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
-          profile="ootd_everyday" 
-          viaText="frenchie_fry40"/>      
       </View>
       
     </View>
@@ -120,5 +124,10 @@ const styles = StyleSheet.create({
   viaText: {
     fontSize: 12,
     color: '#8e8e8e',
+  },
+  postImage: {
+    width: '100%',
+    height: 300,
+    resizeMode: 'cover',
   },
 });
