@@ -1,6 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import {View, Text, Image, StyleSheet, Pressable, Alert} from 'react-native';
 import Profile from './components/Profile';
+import Icon from 'react-native-vector-icons/EvilIcons';
+
 
 export default function App() {
   const buttonMessage = () => {
@@ -15,6 +17,7 @@ export default function App() {
         <View style={styles.header}>
           <Pressable>
             <Text style={styles.backArrow}>←</Text>
+            <Icon name="chevron-left"></Icon>
           </Pressable>
           <View style={styles.headerCenter}>
             <Text style={styles.headMain}>OOTD EVERYDAY</Text>
@@ -48,7 +51,13 @@ export default function App() {
             }}
             style={styles.postImage}
           />
+          
         </View>
+        <View style={styles.left}>
+            <Icon name="heart" size={30}></Icon>
+            <Icon name="comment" size={30}></Icon>
+            <Icon name="sc-telegram" size={30}></Icon>
+          </View>
       </View>
       
     </View>
@@ -70,6 +79,15 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
+    paddingHorizontal: 15,
+    paddingVertical: 12,
+    borderBottomWidth: 0.5,
+    borderBottomColor: '#dbdbdb',
+  },
+  left: {
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+    alignItems: 'flex-start',
     paddingHorizontal: 15,
     paddingVertical: 12,
     borderBottomWidth: 0.5,
