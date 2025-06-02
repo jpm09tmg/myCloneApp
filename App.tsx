@@ -1,6 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import {View, Text, Image, StyleSheet, Pressable, Alert} from 'react-native';
 import Profile from './components/Profile';
+import Icon from 'react-native-vector-icons/EvilIcons';
+
 
 export default function App() {
   const buttonMessage = () => {
@@ -15,6 +17,7 @@ export default function App() {
         <View style={styles.header}>
           <Pressable>
             <Text style={styles.backArrow}>←</Text>
+            <Icon name="chevron-left"></Icon>
           </Pressable>
           <View style={styles.headerCenter}>
             <Text style={styles.headMain}>OOTD EVERYDAY</Text>
@@ -48,12 +51,53 @@ export default function App() {
             }}
             style={styles.postImage}
           />
+          
+        </View>
+          <View style={styles.left}>
+          <Icon name="heart" size={30} />
+          <Icon name="comment" size={30} />
+          <Icon name="sc-telegram" size={30} />
+        </View>
+
+        <View style={styles.captionBlock}>
+          {/* Likes */}
+          <Text style={styles.likesText}>
+            Liked by <Text style={styles.boldText}>paisley.print.48</Text> and 7 others
+          </Text>
+
+          {/* Caption */}
+          <Text style={styles.captionText}>
+            <Text style={styles.boldText}>frenchie_fry39 </Text>
+            Fresh shot on a sunny day! 🌞
+          </Text>
+
+          {/* View all comments */}
+          <Text style={styles.commentCountText}>View all 12 comments</Text>
+
+          {/* Sample comments */}
+          <Text style={styles.commentText}>
+            <Text style={styles.boldText}>lil_wyatt838 </Text>
+            Awesome tones
+          </Text>
+          <Text style={styles.commentText}>
+            <Text style={styles.boldText}>pia.in.a.pod </Text>
+            Gorg. Love it! ❤️
+          </Text>
+
+          {/* Post time */}
+          <Text style={styles.timeText}>1 day ago</Text>
         </View>
       </View>
-      
-    </View>
 
-    
+        <View style={styles.bottomNav}>
+        <Icon name="navicon" size={28} style={styles.navIcon} /> {/* Home */}
+        <Icon name="search" size={28} style={styles.navIcon} />   {/* Search */}
+        <Icon name="plus" size={28} style={styles.navIcon} />     {/* Add */}
+        <Icon name="cart" size={28} style={styles.navIcon} />     {/* Shop */}
+       <Icon name="user" size={28} style={styles.navIcon} />     {/* Profile */}
+    </View>
+   </View>
+   
   );
 }
 
@@ -69,6 +113,15 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: 'row',
     justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingHorizontal: 15,
+    paddingVertical: 12,
+    borderBottomWidth: 0.5,
+    borderBottomColor: '#dbdbdb',
+  },
+  left: {
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
     alignItems: 'center',
     paddingHorizontal: 15,
     paddingVertical: 12,
@@ -130,4 +183,46 @@ const styles = StyleSheet.create({
     height: 300,
     resizeMode: 'cover',
   },
+  captionBlock: {
+  paddingHorizontal: 15,
+  paddingTop: 4,
+   
+},
+likesText: {
+  fontWeight: '600',
+  color: '#262626',
+  marginTop: 5,
+},
+captionText: {
+  color: '#262626',
+  marginBottom: 1,
+},
+commentCountText: {
+  color: '#8e8e8e',
+  marginBottom: 1,
+},
+commentText: {
+  color: '#262626',
+  marginBottom: 1,
+},
+boldText: {
+  fontWeight: 'bold',
+},
+timeText: {
+  color: '#8e8e8e',
+  fontSize: 10,
+  marginTop: 3,
+},
+bottomNav: {
+  flexDirection: 'row',
+  justifyContent: 'space-around',
+  alignItems: 'center',
+  paddingVertical: 10,
+  borderTopWidth: 0.5,
+  borderTopColor: '#dbdbdb',
+  backgroundColor: '#ffffff',
+},
+navIcon: {
+  color: '#262626',
+},
 });
