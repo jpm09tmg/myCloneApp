@@ -15,9 +15,9 @@ export default function App() {
       <View style={styles.mainView}>
 
         <View style={styles.header}>
-          <Pressable>
-            <Text style={styles.backArrow}>←</Text>
-            <Icon name="chevron-left"></Icon>
+          <Pressable onPress={buttonMessage}>
+            
+            <Icon name="chevron-left" size={30}></Icon>
           </Pressable>
           <View style={styles.headerCenter}>
             <Text style={styles.headMain}>OOTD EVERYDAY</Text>
@@ -28,73 +28,56 @@ export default function App() {
           </Pressable>
         </View>
 
-        <View style={styles.profileHeader}>
-          <Image
-            source={{
-              uri: 'https://images.pexels.com/photos/220938/pexels-photo-220938.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-            }}
-            style={styles.profileImage}
+        
+        <Profile 
+          image='https://images.pexels.com/photos/220938/pexels-photo-220938.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+          profile='ootd_everyday'
+          viaText='frenchie_fry39'
+          postImage='https://images.pexels.com/photos/17491971/pexels-photo-17491971/free-photo-of-man-taking-a-walk-with-a-dog.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
           />
-          <View style={styles.profileInfo}>
-            <Text style={styles.profileName}>ootd_everyday</Text>
-            <Text style={styles.viaText}>via frenchie_fry39</Text>
-          </View>
-          <Pressable onPress={buttonMessage}>
-            <Text style={styles.moreText}>⋯</Text>
-          </Pressable>
-        </View>   
-
-        <View>
-          <Image
-            source={{
-              uri: 'https://images.pexels.com/photos/17491971/pexels-photo-17491971/free-photo-of-man-taking-a-walk-with-a-dog.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-            }}
-            style={styles.postImage}
-          />
-          
-        </View>
-          <View style={styles.left}>
+ 
+        <View style={styles.left}>
           <Icon name="heart" size={30} />
           <Icon name="comment" size={30} />
           <Icon name="sc-telegram" size={30} />
         </View>
 
-        <View style={styles.captionBlock}>
-          {/* Likes */}
+<View style={styles.captionBlock}>
+          
           <Text style={styles.likesText}>
-            Liked by <Text style={styles.boldText}>paisley.print.48</Text> and 7 others
+            <Text>Liked by</Text> <Text style={styles.boldText}>paisley.print.48</Text> <Text>and 7 others</Text>
           </Text>
 
-          {/* Caption */}
+          
           <Text style={styles.captionText}>
             <Text style={styles.boldText}>frenchie_fry39 </Text>
-            Fresh shot on a sunny day! 🌞
+            <Text>Fresh shot on a sunny day! 🌞</Text>
           </Text>
 
-          {/* View all comments */}
+          
           <Text style={styles.commentCountText}>View all 12 comments</Text>
 
-          {/* Sample comments */}
+          
           <Text style={styles.commentText}>
             <Text style={styles.boldText}>lil_wyatt838 </Text>
-            Awesome tones
+            <Text>Awesome tones</Text>
           </Text>
           <Text style={styles.commentText}>
             <Text style={styles.boldText}>pia.in.a.pod </Text>
-            Gorg. Love it! ❤️
+            <Text>Gorg. Love it! ❤️</Text>
           </Text>
 
-          {/* Post time */}
+          
           <Text style={styles.timeText}>1 day ago</Text>
         </View>
-      </View>
+      </View> 
 
         <View style={styles.bottomNav}>
-        <Icon name="navicon" size={28} style={styles.navIcon} /> {/* Home */}
-        <Icon name="search" size={28} style={styles.navIcon} />   {/* Search */}
-        <Icon name="plus" size={28} style={styles.navIcon} />     {/* Add */}
-        <Icon name="cart" size={28} style={styles.navIcon} />     {/* Shop */}
-       <Icon name="user" size={28} style={styles.navIcon} />     {/* Profile */}
+        <Icon name="navicon" size={28} style={styles.navIcon} /> 
+        <Icon name="search" size={28} style={styles.navIcon} />   
+        <Icon name="plus" size={28} style={styles.navIcon} />    
+        <Icon name="cart" size={28} style={styles.navIcon} />   
+       <Icon name="user" size={28} style={styles.navIcon} />    
     </View>
    </View>
    

@@ -1,14 +1,14 @@
 import React from "react";
-import { StatusBar } from 'expo-status-bar';
 import {View, Text, Image, StyleSheet, Pressable, Alert} from 'react-native';
 
 interface ProfileProps {
     image: string;
     profile: string;
     viaText: string;
+    postImage: string;
 }
 
-const Profile: React.FC<ProfileProps> =  ({image, profile, viaText}) =>{
+const Profile: React.FC<ProfileProps> =  ({image, profile, viaText, postImage}) =>{
      const buttonMessage = () => {
     Alert.alert('Assignment 1 Completed');
   };
@@ -17,6 +17,7 @@ const Profile: React.FC<ProfileProps> =  ({image, profile, viaText}) =>{
     return (
         
         
+                <View>
                 <View style={styles.profileHeader}>
                   <Image
                     source={{
@@ -32,7 +33,18 @@ const Profile: React.FC<ProfileProps> =  ({image, profile, viaText}) =>{
                     <Text style={styles.moreText}>⋯</Text>
                   </Pressable>
                   
-                </View>      
+                          
+                        </View> 
+                        <View>
+                          <Image
+                            source={{
+                              uri: postImage,
+                            }}
+                            style={styles.postImage}
+                          />
+                           </View>
+                </View>
+                  
               
     );
 };
@@ -106,6 +118,11 @@ const styles = StyleSheet.create({
   viaText: {
     fontSize: 12,
     color: '#8e8e8e',
+  },
+  postImage: {
+    width: '100%',
+    height: 300,
+    resizeMode: 'cover',
   },
 });
 export default Profile;
