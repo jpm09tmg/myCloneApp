@@ -73,11 +73,11 @@ export default function App() {
       </View> 
 
         <View style={styles.bottomNav}>
-        <Icon name="navicon" size={28} style={styles.navIcon} /> 
-        <Icon name="search" size={28} style={styles.navIcon} />   
-        <Icon name="plus" size={28} style={styles.navIcon} />    
-        <Icon name="cart" size={28} style={styles.navIcon} />   
-       <Icon name="user" size={28} style={styles.navIcon} />    
+        <Icon name="navicon" size={38} style={styles.navIcon} /> 
+        <Icon name="search" size={38} style={styles.navIcon} />   
+        <Icon name="plus" size={38} style={styles.navIcon} />    
+        <Icon name="cart" size={38} style={styles.navIcon} />   
+       <Icon name="user" size={38} style={styles.navIcon} />    
     </View>
    </View>
    
@@ -200,7 +200,7 @@ bottomNav: {
   flexDirection: 'row',
   justifyContent: 'space-around',
   alignItems: 'center',
-  paddingVertical: 10,
+  paddingVertical: 20,
   borderTopWidth: 0.5,
   borderTopColor: '#dbdbdb',
   backgroundColor: '#ffffff',
